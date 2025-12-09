@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotics & AI Portfolio | Nirma University</title>
+    <meta name="description"
+        content="Portfolio of a Robotics and AI M.Tech student specializing in hardware and autonomous systems.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">ROBO.<span class="highlight">DEV</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Hardware</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">
+            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <!-- <p class="greeting">SAUMYA SHAH</p> -->
+                <h2 class="greeting">SAUMYA SHAH</h2>
+                <h1>I BUILD <span class="highlight-text">INTELLIGENT MACHINES</span></h1>
+                <!-- <p class="subtitle">M.Tech Robotics & AI Student @ Nirma University</p> -->
+                <div class="cta-group">
+                    <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="assets/hero-bg.png" alt="Abstract Robotics Art" class="hero-image">
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2 class="section-title">01. PROFILE</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>I am a passionate Robotics Engineer focused on bridging the gap between hardware and software.
+                        Currently pursuing my M.Tech at Nirma University, I specialize in embedded systems, autonomous
+                        navigation, and control theory.</p>
+                    <p>My work involves getting hands-on with sensors, microcontrollers, and actuators to create systems
+                        that interact with the physical world.</p>
+                    <a href="assets/SAUMYA_Resume.pdf" class="btn outline resume-btn" download>Download Resume</a>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">ROS 2</div>
+                    <div class="skill-card">Python/C++</div>
+                    <div class="skill-card">Embedded C</div>
+                    <div class="skill-card">Computer Vision</div>
+                    <div class="skill-card">PCB Design</div>
+                    <div class="skill-card">Control Systems</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">02. HARDWARE LAB</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-image-container">
+                        <img src="assets/project1.png" alt="3DOF Robot Manipulator" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3>3DOF Robot Manipulator</h3>
+                        <p class="tech-stack">Arduino • MATLAB • Forward/Inverse Kinematics</p>
+                        <p>Designed and built a robotic arm capable of pick-and-place tasks. Implemented kinematic
+                            algorithms for accurate end-effector motion control.</p>
+                    </div>
+                </article>
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-image-container">
+                        <img src="assets/project2.png" alt="Line Following Robot" class="project-image">
+                    </div>
+                    <div class="project-info">
+                        <h3>Autonomous Mobile Robot</h3>
+                        <p class="tech-stack">Arduino • IR Sensors • Motor Driver</p>
+                        <p>Built a differential drive robot with threshold-based logic for robust line tracking and
+                            dynamic obstacle avoidance capabilities.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">03. CONNECT</h2>
+            <div class="contact-wrapper">
+                <p>Always open to discussing new ideas, research, or opportunities.</p>
+                <a href="mailto:saumyashah630@gmail.com" class="email-link">saumyashah630@gmail.com</a>
+                <div class="social-links">
+                    <a href="https://github.com/SaumyaShah0" aria-label="GitHub">GH</a>
+                    <a href="https://www.linkedin.com/in/saumya-shah-40a4ba285/" aria-label="LinkedIn">IN</a>
+                    <!-- <a href="#" aria-label="Twitter">TW</a> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Robotics Portfolio. Built with Code.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
