@@ -18,30 +18,38 @@
 <body>
     <nav class="navbar">
         <div class="logo">ROBO.<span class="highlight">DEV</span></div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#projects">Hardware</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <button id="theme-toggle" aria-label="Toggle Dark Mode">
-            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-        </button>
+        <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Menu" aria-expanded="false"
+                aria-controls="nav-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </nav>
 
     <main>
@@ -72,21 +80,107 @@
                         that interact with the physical world.</p>
                     <a href="assets/SAUMYA_Resume.pdf" class="btn outline resume-btn" download>Download Resume</a>
                 </div>
-                <div class="skills-grid">
-                    <div class="skill-card">ROS 2</div>
-                    <div class="skill-card">Python/C++</div>
-                    <div class="skill-card">Embedded C</div>
-                    <div class="skill-card">Computer Vision</div>
-                    <div class="skill-card">PCB Design</div>
-                    <div class="skill-card">Control Systems</div>
+                <div class="skills-groups">
+                    <div class="skill-group">
+                        <h4 class="skill-group-title">Robotics &amp; Control</h4>
+                        <div class="skill-chips">
+                            <span class="skill-chip">ROS</span>
+                            <span class="skill-chip">Kinematics</span>
+                            <span class="skill-chip">Control Systems</span>
+                            <span class="skill-chip">Robot Modelling</span>
+                            <span class="skill-chip">Reinforcement Learning</span>
+                            <span class="skill-chip">Computer Vision</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4 class="skill-group-title">AI &amp; Software</h4>
+                        <div class="skill-chips">
+                            <span class="skill-chip">Python</span>
+                            <span class="skill-chip">C/C++</span>
+                            <span class="skill-chip">Machine Learning</span>
+                            <span class="skill-chip">Deep Learning</span>
+                            <span class="skill-chip">Image Processing</span>
+                            <span class="skill-chip">Linux</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4 class="skill-group-title">Embedded &amp; Industrial Automation</h4>
+                        <div class="skill-chips">
+                            <span class="skill-chip">Arduino</span>
+                            <span class="skill-chip">PLC (Allen Bradley / Mitsubishi)</span>
+                            <span class="skill-chip">Modbus TCP/IP</span>
+                            <span class="skill-chip">Ethernet/IP</span>
+                            <span class="skill-chip">HMI Configuration</span>
+                            <span class="skill-chip">SCADA Fundamentals</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <h4 class="skill-group-title">Tools &amp; Simulation</h4>
+                        <div class="skill-chips">
+                            <span class="skill-chip">MATLAB</span>
+                            <span class="skill-chip">Simulink</span>
+                            <span class="skill-chip">PCB Design</span>
+                            <span class="skill-chip">Git</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="projects-section">
-            <h2 class="section-title">02. HARDWARE LAB</h2>
+            <h2 class="section-title">02. PROJECTS</h2>
             <div class="projects-grid">
-                <!-- Project 1 -->
+                <!-- M.Tech Project: Vision-Guided Sorting -->
+                <article class="project-card no-image">
+                    <div class="project-info">
+                        <span class="project-tag">M.Tech</span>
+                        <h3>Vision-Guided Sorting System (UR10e)</h3>
+                        <p class="tech-stack">UR10e • Machine Vision • Coordinate Transformation • Real-time Comm</p>
+                        <p>Designing a vision-guided pick-and-place system on a UR10e cobot, performing
+                            camera-to-robot calibration and real-time object localization for dynamic sorting.</p>
+                    </div>
+                </article>
+                <!-- M.Tech Project: PLC-HMI Automation -->
+                <article class="project-card no-image">
+                    <div class="project-info">
+                        <span class="project-tag">M.Tech</span>
+                        <h3>PLC-HMI Automation System</h3>
+                        <p class="tech-stack">Allen Bradley • Mitsubishi PLC • Modbus TCP/IP • JMobile HMI</p>
+                        <p>Built ladder logic and dynamic HMI dashboards for real-time industrial control, configuring
+                            Modbus TCP/IP and Ethernet/IP communication with full I/O validation.</p>
+                    </div>
+                </article>
+                <!-- M.Tech Project: BipedalWalker RL -->
+                <article class="project-card no-image">
+                    <div class="project-info">
+                        <span class="project-tag">M.Tech</span>
+                        <h3>BipedalWalker-v3 Locomotion (PPO)</h3>
+                        <p class="tech-stack">Python • PyTorch • Stable-Baselines3 • PPO</p>
+                        <p>Trained a continuous-control PPO agent for bipedal locomotion, building a full training and
+                            reward-visualization pipeline with ~40% faster GPU-accelerated convergence.</p>
+                    </div>
+                </article>
+                <!-- M.Tech Project: Autonomous Car Racing RL -->
+                <article class="project-card no-image">
+                    <div class="project-info">
+                        <span class="project-tag">M.Tech</span>
+                        <h3>Autonomous Car Racing (Deep RL)</h3>
+                        <p class="tech-stack">Python • PyTorch • CNN Policies • Deep RL</p>
+                        <p>Trained a vision-based reinforcement learning agent using CNN policies for steering,
+                            braking, and acceleration, achieving expert-level performance (reward &gt; 850).</p>
+                    </div>
+                </article>
+                <!-- M.Tech Project: Smart Energy Monitoring -->
+                <article class="project-card no-image">
+                    <div class="project-info">
+                        <span class="project-tag">M.Tech</span>
+                        <h3>Smart Energy Monitoring System (IoT)</h3>
+                        <p class="tech-stack">IoT • Sensor Integration • Cloud Dashboard</p>
+                        <p>Designed an appliance-level IoT monitoring architecture with sensor integration and a cloud
+                            dashboard for real-time energy usage visualization.</p>
+                    </div>
+                </article>
+                <!-- Project: 3DOF Manipulator -->
                 <article class="project-card">
                     <div class="project-image-container">
                         <img src="assets/project1.png" alt="3DOF Robot Manipulator" class="project-image">
@@ -98,7 +192,7 @@
                             algorithms for accurate end-effector motion control.</p>
                     </div>
                 </article>
-                <!-- Project 2 -->
+                <!-- Project: Line Following Robot -->
                 <article class="project-card">
                     <div class="project-image-container">
                         <img src="assets/project2.png" alt="Line Following Robot" class="project-image">

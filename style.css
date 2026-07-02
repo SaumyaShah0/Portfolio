@@ -93,6 +93,12 @@ a {
     color: var(--accent);
 }
 
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 /* Theme Toggle */
 #theme-toggle {
     background: none;
@@ -103,6 +109,41 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Hamburger Menu Toggle (mobile only) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 .sun-icon {
@@ -319,23 +360,36 @@ h1 {
     color: var(--text-secondary);
 }
 
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+.skills-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.skill-card {
-    background: var(--bg-secondary);
-    padding: 1rem;
-    border: 1px solid var(--border);
-    text-align: center;
+.skill-group-title {
     font-family: var(--font-mono);
-    font-size: 0.9rem;
-    transition: transform 0.2s;
+    font-size: 0.85rem;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
 }
 
-.skill-card:hover {
+.skill-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-chip {
+    background: var(--bg-secondary);
+    padding: 0.5rem 0.9rem;
+    border: 1px solid var(--border);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.skill-chip:hover {
     transform: translateY(-2px);
     border-color: var(--accent);
 }
@@ -379,6 +433,22 @@ h1 {
 
 .project-card:hover .project-image {
     transform: scale(1.05);
+}
+
+.project-card.no-image {
+    border-top: 3px solid var(--accent);
+}
+
+.project-tag {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    padding: 0.15rem 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .project-info {
@@ -438,14 +508,63 @@ footer {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+    .about-container {
+        gap: 2.5rem;
+    }
+
+    .hero-image {
+        max-width: 380px;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar {
-        padding: 1.5rem 1rem;
+        padding: 1.2rem 1rem;
+    }
+
+    .menu-toggle {
+        display: flex;
     }
 
     .nav-links {
-        display: none;
-        /* simple mobile hide for MVP */
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        position: fixed;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: var(--bg-primary);
+        border-bottom: 1px solid var(--border);
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: max-height 0.3s ease, opacity 0.2s ease, visibility 0.3s;
+    }
+
+    .nav-links.active {
+        max-height: 60vh;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid var(--border);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1.1rem 1rem;
+    }
+
+    .about-section,
+    .projects-section,
+    .contact-section {
+        padding: 4rem 6%;
     }
 
     h1 {
@@ -454,19 +573,90 @@ footer {
 
     .about-container {
         grid-template-columns: 1fr;
+        gap: 3rem;
     }
 
     .hero {
         flex-direction: column;
         justify-content: center;
         text-align: center;
+        min-height: auto;
+        padding-top: 100px;
+        padding-bottom: 3rem;
     }
 
     .hero-content {
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
+        max-width: 100%;
+    }
+
+    .hero-image {
+        max-width: 280px;
     }
 
     .cta-group {
         justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .skill-chips {
+        justify-content: center;
+    }
+
+    .skill-group-title {
+        text-align: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .email-link {
+        font-size: 1.4rem;
+        word-break: break-word;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 1rem 1rem;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .greeting {
+        font-size: 0.8rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .cta-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta-group .btn {
+        text-align: center;
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .project-info {
+        padding: 1.2rem;
+    }
+
+    .social-links {
+        gap: 1.25rem;
     }
 }

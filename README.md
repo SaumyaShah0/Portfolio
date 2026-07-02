@@ -30,15 +30,40 @@ A modern, high-performance portfolio website designed to showcase projects, skil
 - **⚡ Performance Focused**: Vanilla JavaScript and CSS for maximum speed and minimal bloat.
 - **🤖 Specialized Content**: Tailored specifically for a Robotics Engineer profile.
 
-## 🛠️ Hardware Lab (Projects)
+## 🛠️ Projects
 
-### 1. 3DOF Robot Manipulator
+### 1. Vision-Guided Sorting System (UR10e) — M.Tech
+*Industrial Robotics, Machine Vision, Coordinate Transformation*
+- **Description**: Vision-guided pick-and-place system on a UR10e cobot with camera-to-robot calibration for dynamic sorting.
+- **Tech**: UR10e, Machine Vision, Real-time Communication.
+
+### 2. PLC-HMI Automation System — M.Tech
+*Industrial Automation, PLC Programming*
+- **Description**: Ladder logic and dynamic HMI dashboards for real-time industrial control.
+- **Tech**: Allen Bradley, Mitsubishi PLC, Modbus TCP/IP, Ethernet/IP, JMobile.
+
+### 3. BipedalWalker-v3 Locomotion (PPO) — M.Tech
+*Reinforcement Learning, Continuous Control*
+- **Description**: Continuous-control PPO agent for bipedal locomotion with a full training/reward-visualization pipeline (~40% faster GPU convergence).
+- **Tech**: Python, PyTorch, Stable-Baselines3, Gymnasium.
+
+### 4. Autonomous Car Racing (Deep RL) — M.Tech
+*Vision-based Reinforcement Learning*
+- **Description**: Vision-based RL agent using CNN policies for steering, braking, and acceleration; achieved expert-level performance (reward > 850).
+- **Tech**: Python, PyTorch, Stable-Baselines3, TensorBoard.
+
+### 5. Smart Energy Monitoring System (IoT) — M.Tech
+*Embedded Systems, Sensor Integration*
+- **Description**: Appliance-level monitoring architecture with cloud dashboard for real-time energy visualization.
+- **Tech**: IoT sensors, cloud dashboard integration.
+
+### 6. 3DOF Robot Manipulator
 *Kinematics, Control Systems, MATLAB*
 - **Description**: Designed and built a 3-degree-of-freedom robotic arm capable of precise pick-and-place operations.
 - **Tech**: Arduino, MATLAB, Inverse Kinematics algorithms.
 - **Highlight**: Implemented custom motion control logic for smooth path planning.
 
-### 2. Autonomous Mobile Robot
+### 7. Autonomous Mobile Robot
 *Embedded Systems, Sensors, Navigation*
 - **Description**: A differential drive robot engineered for robust line tracking and dynamic obstacle avoidance.
 - **Tech**: Arduino, IR Sensors, L298N Motor Driver.
@@ -52,6 +77,10 @@ A modern, high-performance portfolio website designed to showcase projects, skil
 | **Fonts** | Inter (Sans-serif), JetBrains Mono (Monospace) |
 | **Icons** | Custom SVG Icons (Feather Icons style) |
 | **Tools** | VS Code, Git, GitHub Pages |
+| **Robotics & Control** | ROS, Kinematics, Control Systems, Robot Modelling, Reinforcement Learning, Computer Vision |
+| **AI & Software** | Python, C/C++, Machine Learning, Deep Learning, Image Processing, Linux |
+| **Embedded & Industrial Automation** | Arduino, PLC (Allen Bradley/Mitsubishi), Modbus TCP/IP, Ethernet/IP, HMI Configuration, SCADA |
+| **Simulation** | MATLAB, Simulink, PCB Design |
 
 ## 📁 Project Structure
 
